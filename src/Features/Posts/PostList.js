@@ -8,8 +8,9 @@ const PostList = () => {
     const postData = useSelector(allPostSelector);
     const renderPost = postData.map((post) => {
         return (
-            <>
-                <Card key={post.id} className='m-5 '>
+            <div key={post.id}>
+
+                <Card  className='m-5 '>
                     <CardHeader 
                      style={{
                         backgroundColor: '',
@@ -22,7 +23,7 @@ const PostList = () => {
                          <TimeAgo timestamp={post.date} />
                     </CardBody>
                 </Card>
-            </>
+            </div>
         )
     })
     return (

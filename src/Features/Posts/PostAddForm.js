@@ -47,7 +47,7 @@ const PostAddForm = () => {
         <>
             <div className='m-4 pb-5 pt-2 border'>
                 <h3 className='text-center mb-4'>Create Auther </h3>
-                <Form onSubmit={handleEnter} row>
+                <Form onSubmit={handleEnter} row='true'>
                     <FormGroup className='m-5 '>
                         <Input type='text' placeholder='Create Here ...' onChange={handleCreateChange} value={author} />
                         <Button className='btn-success mt-3 ' type='submit'>Enter</Button>
@@ -56,21 +56,21 @@ const PostAddForm = () => {
             </div>
             <div className='m-3 p-5 border'>
                 <h3 className='text-center'>Create Post </h3>
-                <Form onSubmit={handleSubmit} >
-                    <FormGroup row>
+                <Form onSubmit={handleSubmit} row='true' >
+                    <FormGroup >
                         <Label className="me-sm-2" sm={2}>Title</Label>
                         <Col sm={10}>
                             <Input type='text' placeholder='Heading...' onChange={handleTitleChange} value={title} />
                         </Col>
                     </FormGroup>
-                    <FormGroup row>
+                    <FormGroup >
                         <Label className='me-sm-2' sm={2}>Cotent</Label>
                         <Col sm={10}>
                             <Input type='text' placeholder='Description...' onChange={handleContentChange} value={content} />
                         </Col>
                     </FormGroup>
                     <Label className='me-sm-2'>Select Author</Label>
-                    <FormGroup row>
+                    <FormGroup >
                         <Col sm={10}>
                             <Input
                                 type="select"
